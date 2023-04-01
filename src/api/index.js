@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const url = "http://3.95.188.107:4000/api";
+export const url = "https://onus-api.onrender.com";
 
 const instance = axios.create({
   baseURL: url,

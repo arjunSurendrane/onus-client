@@ -16,7 +16,7 @@ import CreateDepartment from "./Pages/User/Workspace/createDepartment";
 import CreateTaskFromLogin from "./Pages/User/Workspace/createTaskFromLogin";
 import socketIoClient from "socket.io-client";
 import Redirect from "./Component/User/Loading.js/redirect";
-const ENDPOINT = "http://localhost:4000";
+const ENDPOINT = "https://onus-api.onrender.com";
 const socket = socketIoClient(ENDPOINT, { auth: { token: 123 } });
 export const SocketContext = createContext();
 function App() {
