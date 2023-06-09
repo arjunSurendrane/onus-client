@@ -196,18 +196,20 @@ export default function OtpVerification() {
         <p className="mt-10 cursor-pointer" onClick={handleResend}>
           Resend Otp
         </p>
-        <button
-          className="rounded bg-[#6b2f72] w-44 h-10 mt-10 text-white hover:bg-[#58255e] grid place-content-center"
-          type="submit"
-        >
-          {loading ? (
-            <Box sx={{ display: "flex" }}>
-              <CircularProgress color="inherit" size={20} />
-            </Box>
-          ) : (
-            "Submit"
-          )}
-        </button>
+        <div className="grid place-content-center">
+          <button
+            className="rounded bg-[#6b2f72] w-44 h-10 mt-10 text-white hover:bg-[#58255e] grid place-content-center"
+            type="submit"
+          >
+            {loading ? (
+              <Box sx={{ display: "flex" }}>
+                <CircularProgress color="inherit" size={20} />
+              </Box>
+            ) : (
+              "Submit"
+            )}
+          </button>
+        </div>
       </form>
     </div>
   );

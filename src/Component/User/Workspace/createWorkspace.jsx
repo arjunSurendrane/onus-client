@@ -46,7 +46,10 @@ export default function CreateWorkspaces({
       if (res.data.status == "success") {
         //localStorage.setItem("Workspace", JSON.stringify({ ...res.data.data }));
         await userAuthorization(cookie.userJwt);
-        const id = res.data?.data?._id;
+        console.log({ res });
+        const id = res.data?.data?.id;
+        console.log({ id });
+        localStorage.setItem("CurrentWSpace", id);
         history(`/${id}/home`);
       } else {
         setError("something went wrong!!!");
