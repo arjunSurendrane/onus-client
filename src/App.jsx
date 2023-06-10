@@ -1,6 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import dotenv from "dotenv";
 import LandingPage from "./Pages/User/LandingPage/LandingPage";
 import ForgotPassword from "./Pages/User/Login/forgotPasswordOtp";
 import OtpPage from "./Pages/User/Login/OtpPage";
@@ -17,10 +16,10 @@ import CreateDepartment from "./Pages/User/Workspace/createDepartment";
 import CreateTaskFromLogin from "./Pages/User/Workspace/createTaskFromLogin";
 import socketIoClient from "socket.io-client";
 import Redirect from "./Component/User/Loading.js/redirect";
-const ENDPOINT = "http://localhost:4000";
+import { url } from "./api";
+const ENDPOINT = url;
 const socket = socketIoClient(ENDPOINT, { auth: { token: 123 } });
 export const SocketContext = createContext();
-dotenv.config();
 function App() {
   return (
     <div className="overflow-y-hidden">
